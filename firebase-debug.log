@@ -1,0 +1,110 @@
+[debug] [2022-05-28T08:28:00.022Z] ----------------------------------------------------------------------
+[debug] [2022-05-28T08:28:00.024Z] Command:       /usr/local/Cellar/node@14/14.19.1/bin/node /usr/local/bin/firebase deploy
+[debug] [2022-05-28T08:28:00.025Z] CLI Version:   11.0.0
+[debug] [2022-05-28T08:28:00.025Z] Platform:      darwin
+[debug] [2022-05-28T08:28:00.025Z] Node Version:  v14.19.1
+[debug] [2022-05-28T08:28:00.026Z] Time:          Sat May 28 2022 17:28:00 GMT+0900 (日本標準時)
+[debug] [2022-05-28T08:28:00.026Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2022-05-28T08:28:00.130Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2022-05-28T08:28:00.130Z] > authorizing via signed-in user (miuraasahi1@gmail.com)
+[debug] [2022-05-28T08:28:00.130Z] [iam] checking project chatbot-demo-ed5fe for permissions ["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","datastore.indexes.create","datastore.indexes.delete","datastore.indexes.list","datastore.indexes.update","firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2022-05-28T08:28:00.133Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/chatbot-demo-ed5fe:testIamPermissions [none]
+[debug] [2022-05-28T08:28:00.133Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/chatbot-demo-ed5fe:testIamPermissions {"permissions":["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","datastore.indexes.create","datastore.indexes.delete","datastore.indexes.list","datastore.indexes.update","firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2022-05-28T08:28:00.943Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/chatbot-demo-ed5fe:testIamPermissions 200
+[debug] [2022-05-28T08:28:00.943Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/chatbot-demo-ed5fe:testIamPermissions {"permissions":["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","datastore.indexes.create","datastore.indexes.delete","datastore.indexes.list","datastore.indexes.update","firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2022-05-28T08:28:00.944Z] >>> [apiv2][query] POST https://iam.googleapis.com/v1/projects/chatbot-demo-ed5fe/serviceAccounts/chatbot-demo-ed5fe@appspot.gserviceaccount.com:testIamPermissions [none]
+[debug] [2022-05-28T08:28:00.944Z] >>> [apiv2][body] POST https://iam.googleapis.com/v1/projects/chatbot-demo-ed5fe/serviceAccounts/chatbot-demo-ed5fe@appspot.gserviceaccount.com:testIamPermissions {"permissions":["iam.serviceAccounts.actAs"]}
+[debug] [2022-05-28T08:28:01.891Z] <<< [apiv2][status] POST https://iam.googleapis.com/v1/projects/chatbot-demo-ed5fe/serviceAccounts/chatbot-demo-ed5fe@appspot.gserviceaccount.com:testIamPermissions 200
+[debug] [2022-05-28T08:28:01.891Z] <<< [apiv2][body] POST https://iam.googleapis.com/v1/projects/chatbot-demo-ed5fe/serviceAccounts/chatbot-demo-ed5fe@appspot.gserviceaccount.com:testIamPermissions {"permissions":["iam.serviceAccounts.actAs"]}
+[debug] [2022-05-28T08:28:01.892Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/chatbot-demo-ed5fe [none]
+[debug] [2022-05-28T08:28:02.307Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/chatbot-demo-ed5fe 200
+[debug] [2022-05-28T08:28:02.307Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/chatbot-demo-ed5fe {"projectId":"chatbot-demo-ed5fe","projectNumber":"829317917767","displayName":"chatbot-demo","name":"projects/chatbot-demo-ed5fe","resources":{"hostingSite":"chatbot-demo-ed5fe","storageBucket":"chatbot-demo-ed5fe.appspot.com","locationId":"asia-northeast1"},"state":"ACTIVE"}
+[info] 
+[info] === Deploying to 'chatbot-demo-ed5fe'...
+[info] 
+[info] i  deploying firestore, functions, hosting 
+[info] Running command: npm --prefix "$RESOURCE_DIR" run lint
+[info] Running command: npm --prefix "$RESOURCE_DIR" run build
+[info] ✔  functions: Finished running predeploy script. 
+[info] i  firestore: reading indexes from firestore.indexes.json... 
+[info] i  cloud.firestore: checking firestore.rules for compilation errors... 
+[debug] [2022-05-28T08:28:30.766Z] >>> [apiv2][query] POST https://firebaserules.googleapis.com/v1/projects/chatbot-demo-ed5fe:test [none]
+[debug] [2022-05-28T08:28:30.767Z] >>> [apiv2][body] POST https://firebaserules.googleapis.com/v1/projects/chatbot-demo-ed5fe:test [omitted]
+[debug] [2022-05-28T08:28:31.972Z] <<< [apiv2][status] POST https://firebaserules.googleapis.com/v1/projects/chatbot-demo-ed5fe:test 200
+[debug] [2022-05-28T08:28:31.973Z] <<< [apiv2][body] POST https://firebaserules.googleapis.com/v1/projects/chatbot-demo-ed5fe:test {}
+[info] ✔  cloud.firestore: rules file firestore.rules compiled successfully 
+[debug] [2022-05-28T08:28:31.976Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/chatbot-demo-ed5fe [none]
+[debug] [2022-05-28T08:28:32.463Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/chatbot-demo-ed5fe 200
+[debug] [2022-05-28T08:28:32.463Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/chatbot-demo-ed5fe {"projectId":"chatbot-demo-ed5fe","projectNumber":"829317917767","displayName":"chatbot-demo","name":"projects/chatbot-demo-ed5fe","resources":{"hostingSite":"chatbot-demo-ed5fe","storageBucket":"chatbot-demo-ed5fe.appspot.com","locationId":"asia-northeast1"},"state":"ACTIVE"}
+[info] i  functions: ensuring required API cloudfunctions.googleapis.com is enabled... 
+[info] i  functions: ensuring required API cloudbuild.googleapis.com is enabled... 
+[debug] [2022-05-28T08:28:32.467Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/chatbot-demo-ed5fe/services/cloudfunctions.googleapis.com [none]
+[debug] [2022-05-28T08:28:32.469Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/chatbot-demo-ed5fe/services/runtimeconfig.googleapis.com [none]
+[debug] [2022-05-28T08:28:32.471Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/chatbot-demo-ed5fe/services/cloudbuild.googleapis.com [none]
+[debug] [2022-05-28T08:28:32.473Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/chatbot-demo-ed5fe/services/artifactregistry.googleapis.com [none]
+[debug] [2022-05-28T08:28:33.545Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/chatbot-demo-ed5fe/services/artifactregistry.googleapis.com 200
+[debug] [2022-05-28T08:28:33.546Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/chatbot-demo-ed5fe/services/artifactregistry.googleapis.com [omitted]
+[debug] [2022-05-28T08:28:33.548Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/chatbot-demo-ed5fe/services/cloudbuild.googleapis.com 200
+[debug] [2022-05-28T08:28:33.548Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/chatbot-demo-ed5fe/services/cloudbuild.googleapis.com [omitted]
+[warn] ⚠  functions: missing required API cloudbuild.googleapis.com. Enabling now... 
+[debug] [2022-05-28T08:28:33.550Z] >>> [apiv2][query] POST https://serviceusage.googleapis.com/v1/projects/chatbot-demo-ed5fe/services/cloudbuild.googleapis.com:enable [none]
+[debug] [2022-05-28T08:28:33.558Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/chatbot-demo-ed5fe/services/runtimeconfig.googleapis.com 200
+[debug] [2022-05-28T08:28:33.558Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/chatbot-demo-ed5fe/services/runtimeconfig.googleapis.com [omitted]
+[debug] [2022-05-28T08:28:33.560Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/chatbot-demo-ed5fe/services/cloudfunctions.googleapis.com 200
+[debug] [2022-05-28T08:28:33.560Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/chatbot-demo-ed5fe/services/cloudfunctions.googleapis.com [omitted]
+[info] ✔  functions: required API cloudfunctions.googleapis.com is enabled 
+[debug] [2022-05-28T08:28:34.919Z] <<< [apiv2][status] POST https://serviceusage.googleapis.com/v1/projects/chatbot-demo-ed5fe/services/cloudbuild.googleapis.com:enable 200
+[debug] [2022-05-28T08:28:34.920Z] <<< [apiv2][body] POST https://serviceusage.googleapis.com/v1/projects/chatbot-demo-ed5fe/services/cloudbuild.googleapis.com:enable [omitted]
+[debug] [2022-05-28T08:28:44.923Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/chatbot-demo-ed5fe/services/cloudbuild.googleapis.com [none]
+[debug] [2022-05-28T08:28:46.014Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/chatbot-demo-ed5fe/services/cloudbuild.googleapis.com 200
+[debug] [2022-05-28T08:28:46.015Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/chatbot-demo-ed5fe/services/cloudbuild.googleapis.com [omitted]
+[info] ✔  functions: required API cloudbuild.googleapis.com is enabled 
+[debug] [2022-05-28T08:28:46.022Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/chatbot-demo-ed5fe/adminSdkConfig [none]
+[debug] [2022-05-28T08:28:46.524Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/chatbot-demo-ed5fe/adminSdkConfig 200
+[debug] [2022-05-28T08:28:46.525Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/chatbot-demo-ed5fe/adminSdkConfig {"projectId":"chatbot-demo-ed5fe","storageBucket":"chatbot-demo-ed5fe.appspot.com","locationId":"asia-northeast1"}
+[debug] [2022-05-28T08:28:46.526Z] >>> [apiv2][query] GET https://runtimeconfig.googleapis.com/v1beta1/projects/chatbot-demo-ed5fe/configs [none]
+[debug] [2022-05-28T08:28:46.976Z] <<< [apiv2][status] GET https://runtimeconfig.googleapis.com/v1beta1/projects/chatbot-demo-ed5fe/configs 200
+[debug] [2022-05-28T08:28:46.976Z] <<< [apiv2][body] GET https://runtimeconfig.googleapis.com/v1beta1/projects/chatbot-demo-ed5fe/configs {}
+[info] i  functions: preparing codebase default for deployment 
+[debug] [2022-05-28T08:28:46.981Z] Validating nodejs source
+[debug] [2022-05-28T08:28:49.962Z] > [functions] package.json contents: {
+  "name": "functions",
+  "scripts": {
+    "lint": "eslint --ext .js,.ts .",
+    "build": "tsc",
+    "build:watch": "tsc --watch",
+    "serve": "npm run build && firebase emulators:start --only functions",
+    "shell": "npm run build && firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "16"
+  },
+  "main": "lib/index.js",
+  "dependencies": {
+    "firebase-admin": "^10.0.2",
+    "firebase-functions": "^3.18.0"
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^5.12.0",
+    "@typescript-eslint/parser": "^5.12.0",
+    "eslint": "^8.9.0",
+    "eslint-config-google": "^0.14.0",
+    "eslint-plugin-import": "^2.25.4",
+    "firebase-functions-test": "^0.2.0",
+    "typescript": "^4.5.4"
+  },
+  "private": true
+}
+[debug] [2022-05-28T08:28:49.962Z] Building nodejs source
+[debug] [2022-05-28T08:28:49.963Z] Analyzing nodejs backend spec
+[debug] [2022-05-28T08:28:49.964Z] Could not find functions.yaml. Must use http discovery
+[debug] [2022-05-28T08:28:49.981Z] Error: spawn ./node_modules/.bin/firebase-functions ENOENT
+    at Process.ChildProcess._handle.onexit (internal/child_process.js:274:19)
+    at onErrorNT (internal/child_process.js:469:16)
+    at processTicksAndRejections (internal/process/task_queues.js:82:21)
+[error] 
+[error] Error: An unexpected error has occurred.
